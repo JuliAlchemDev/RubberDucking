@@ -11,7 +11,12 @@ function App() {
   
   return (
     <div className="App">
-      <header className='App__header'></header>
+      <header className="App__header">
+        <h1 className='header__h1'>RubberDucking</h1>
+        <p className='header__p'>Discover the Magic of Markdown!
+        Write something in a note block, and watch it come to life on your screen. Simple, powerful, and fun to use!</p>
+      </header> 
+      
       <main className='App__main'>
         <section className='main__section--Desktop'>
           <article id='preview'
@@ -32,8 +37,13 @@ function App() {
           ></textarea>
         </section>
       </main>
+
       <footer className='App__footer'>
-        
+        <p className='footer__p'>This app is inspired by the Markdown Previewer project from 
+          <a className='footer__a' href='https://markdown-previewer.freecodecamp.rocks' target='_blank'>
+          <img className='footer__img' alt="freeCodeCampLogo" src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/FreeCodeCamp_logo.svg/1600px-FreeCodeCamp_logo.svg.png'></img></a>
+          's Front End Development Libraries certification.
+          </p>
       </footer>
     </div>
   );

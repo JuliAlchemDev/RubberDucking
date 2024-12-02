@@ -1,38 +1,86 @@
+:root {
+  /* Colors */
+  --black-primary: black;
+  --black-secondary: #181818;
+  --background-color-primary: white;
+  --background-color-secondary: #f0f0f0;
+  --duck-yellow: #FADF85;
+  --duck-orange: #F4B959;
+  --duck-black: #354143;
+
+  /* Fonts */
+  --font-primary: Arial, Helvetica, sans-serif;
+  --font-notes: "Comic Sans MS", cursive;
+  --font-desktop: monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  /* vertical-align: baseline; */ 
+}
+
 .App {
+  height: 100vh; /*Check this*/
+  font-size: 100%;
+  font-family: var(--font-primary);
+  background-color: var(--background-color-secondary);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  
+}
+.App__header {
+  width: 100%;
+ 
+}
+.header__h1 {
+  padding: 5.5%;
+  color: var(--black-secondary); /* Try var(--duck-black)*/
   text-align: center;
+  background-image: url('./duck.png');
+  background-size: 5rem 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Try Shadows */
+  /* text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5); */
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__p {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App__main {
+  background-color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App__footer {
+  color: var(--black-secondary);
+  width: 100%;
+  background-color: var(--duck-orange);
+}
+.footer__p {
+  width: 100%;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.footer__a {
+  width: 15rem;
+  padding-top: 0.5%;
+}
+.footer__img {
+  width: 100%;
+  vertical-align: middle;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#preview, #editor {
+  display:none;
 }
