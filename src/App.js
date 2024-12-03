@@ -16,9 +16,9 @@ function App() {
         <p className='header__p'>Discover the Magic of Markdown!
         Write something in a note block, and watch it come to life on your screen. Simple, powerful, and fun to use!</p>
       </header> 
-      
+
       <main className='App__main'>
-        <section className='main__section--Desktop'>
+        <section className='main__section--Screen'>
           <article id='preview'
           dangerouslySetInnerHTML={{
             __html: marked(text)
