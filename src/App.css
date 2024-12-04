@@ -18,26 +18,29 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  /* vertical-align: baseline; */ 
+  /* vertical-align: baseline;  */
 }
 
 .App {
   height: 100vh; /*Check this*/
   font-size: 100%;
   font-family: var(--font-primary);
-  background-color: var(--background-color-secondary);
+  background-color: var(--background-color-primary);
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   align-items: center;
 }
 .App__header {
-  width: 100%;
-  background-color: var(--duck-orange); /* Delete*/
+  width: 95%;
+  margin-top: 2%;
+  border-radius: 1rem;
+  background-color: var(--duck-yellow);
+  box-shadow: -0.5rem -0.3rem 0 0 var(--duck-orange),
+  0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1); 
 }
 .header__h1 {
   padding: 7%;
-  color: var(--black-secondary); /* Try var(--duck-black)*/
+  color: var(--black-secondary); 
   text-align: center;
   background-image: url('./duck.png');
   background-size: 5rem 5rem;
@@ -45,29 +48,29 @@
   background-position: center;
 
   /* Try Shadows */
-  /* text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5); */
+  text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
   position: relative;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5));
 }
 .header__p {
   display: none;
 }
 .App__main {
   width: 75%;
-  height: 70vh;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around; 
+  gap: 5%;
 }
-
 
 .main__section--Screen {
   height: 35%;
   width: 85%;
+  margin-top: 2.5%;
   background-color: #1B1A17;
   border-radius: 1rem;
   border: 0.5rem solid var(--background-color-primary);
@@ -76,12 +79,13 @@
   position: relative;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5)); /* Try Shadows */
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5)); 
   
   color: var(--duck-orange);
   align-items: flex-end;
   font-size: 0.66rem;
   text-align: center;
+  transition: transform 1500ms;
 }
 .main__section--Screen::before {
   content: '';
@@ -89,20 +93,20 @@
   background-color: var(--duck-yellow);
   clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
   height: 2.3rem;
-  width: 6.5rem;
+  width: 4.5rem;
   top: calc(100% + 45px);
 }
 .main__section--Screen::after {
   content: '';
   position: absolute;
-  width: 60%;
+  width: 8rem;
   height: 10px;
   background-color: var(--duck-yellow);
   border-radius: 1rem;
   top: calc(100% + 80px);
     
 }
-/* Previewer */
+/* Previewer START */
 #preview {
   overflow: auto;
   max-height: 98%;
@@ -110,12 +114,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  padding: 0.5rem;
   font-family: var(--font-desktop);
-  
 }
-
-
 #preview code {
   background-color: var(--duck-orange);
   color: var(--black-secondary);
@@ -144,12 +145,49 @@
   padding: 0.5rem;
   border: 0.15rem dashed var(--black-primary);
 }
-/* Previewer */
-
-
-
-
-
+/* Previewer END */
+.main__section--Duck { 
+  display: none;
+}
+.main__section--Notes {
+  width: 65%;
+  height: 200px;
+  border: 0.2rem solid var(--black-secondary);
+  border-radius: 2rem 1rem 1rem 2rem;
+  background-color: var(--background-color-primary);
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0,0,0, 0.5)); /*Try Shadows*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: transform 700ms;
+}
+.main__section--Notes::after {
+  content: '';
+  position: absolute;
+  width: 2.2rem; 
+  height: 0.4rem;
+  background-color: var(--black-secondary);
+  border-radius: 5rem;
+  top: 1.4rem;
+  left: -1rem;
+  box-shadow: 
+  0 1.5rem 0 0 var(--black-secondary),
+  0 3rem 0 0 var(--black-secondary),
+  0 4.5rem 0 0 var(--black-secondary),
+  0 6rem 0 0 var(--black-secondary),
+  0 7.5rem 0 0 var(--black-secondary),
+  0 9rem 0 0 var(--black-secondary);  
+}
+/* Editor START */
+#editor {
+  resize: none;
+  caret-color: var(--duck-orange);
+  outline: none;
+  padding: 0.5rem;
+  width: 75%;
+  font-family: var(--font-notes);
+}
+/* Editor END */
 .App__footer {
   color: var(--black-secondary);
   width: 100%;
@@ -171,7 +209,12 @@
   width: 100%;
   vertical-align: middle;
 }
-
-#editor {
-  display:none;
+/* Animation */
+.main__section--Screen:hover {
+  transition: transform 700ms;
+  transform: scale(1.5);
+}
+.main__section--Notes:hover {
+  transform: scale(1.5);
+  transition: transform 250ms;
 }
