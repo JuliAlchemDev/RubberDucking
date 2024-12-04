@@ -14,7 +14,7 @@ function App() {
       <header className="App__header">
         <h1 className='header__h1'>RubberDucking</h1>
         <p className='header__p'>Discover the Magic of Markdown!
-        Write something in a note block, and watch it come to life on your screen. Simple, powerful, and fun to use!</p>
+        Write something in a note block, and watch it come to life on the screen. Simple, powerful, and fun to use!</p>
       </header> 
 
       <main className='App__main'>
