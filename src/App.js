@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { marked } from 'marked'
 import './App.css';
+import duckImage from './duck.png';
 
 function App() {
   marked.setOptions({
@@ -8,7 +9,18 @@ function App() {
   })
  
   const [text, setText] = useState('# Here\'s my\n## React Markdown Previewer!\nCurious to dive deeper? Explore the official [site here!](https://marked.js.org)\nOr, you can install it by running:\n`npm install -g marked`\nThen,\n```\n# Print all options:\n $ marked --help\n```\n> "TO MAKE A LONG STORY SHORT"\n\n **Benefits of Markdown:**\n- Simple syntax\n- Converts easily to HTML\n- Portable across platforms\n\n![Marked-logo](https://marked.js.org/img/logo-black.svg)')
-  
+  const [cheerUp, setCheerUp] = useState('Keep going!')
+  const cheersUp = ["You’re doing amazing!", "Brilliant!", "One step at a time!", "Awesome!", "You’ve got this!"];
+
+  const getRandomCheerUp = () => {
+    let random = Math.floor(cheersUp.length * Math.random())
+    setCheerUp(cheersUp[random])
+  }
+  useEffect(()=>{
+    const timing = setInterval(getRandomCheerUp, 5000);
+    return () => clearInterval(timing);
+  })
+
   return (
     <div className="App">
       <header className="App__header">
@@ -27,6 +39,10 @@ function App() {
           // {marked.parse(text)} 
           ></article>
           <img></img>
+        </section>
+        <section className='main__section--Duck'>
+          <img  id='img__Duck' src={duckImage} alt="Duck" />
+          <p id='p__cheerUp'>{cheerUp}</p>
         </section>
         <section className='main__section--Notes'>
           <textarea 
