@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 .App {
-  height: 100dvh; 
+  height: 100vh; 
   font-size: 100%;
   font-family: var(--font-primary);
   background-color: var(--background-color-primary);
