@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RubberDucking/static/css/main.7a7eefaa.css",
+    "main.js": "/RubberDucking/static/js/main.73301a75.js",
+    "static/js/453.cf94360e.chunk.js": "/RubberDucking/static/js/453.cf94360e.chunk.js",
+    "static/media/duck.png": "/RubberDucking/static/media/duck.643c4adbb6f075756cdf.png",
+    "index.html": "/RubberDucking/index.html",
+    "main.7a7eefaa.css.map": "/RubberDucking/static/css/main.7a7eefaa.css.map",
+    "main.73301a75.js.map": "/RubberDucking/static/js/main.73301a75.js.map",
+    "453.cf94360e.chunk.js.map": "/RubberDucking/static/js/453.cf94360e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a7eefaa.css",
+    "static/js/main.73301a75.js"
+  ]
+}
