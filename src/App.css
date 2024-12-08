@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 .App {
-  height: 100vh; 
+  height: 100dvh; 
   font-size: 100%;
   font-family: var(--font-primary);
   background-color: var(--background-color-primary);
@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around; 
-  gap: 5%;
+  /* gap: 5%; */
 }
 .main__section--Screen {
   height: 35%;
@@ -220,7 +220,7 @@
     flex-direction: column;
     align-items: center;
     padding: 1.5% 5% 2% 5%;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
   .header__h1 {
     
